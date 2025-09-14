@@ -12,6 +12,19 @@
 body {<audio id="bgm" autoplay loop>
   <source src="sound.mp3" type="audio/mpeg">
   Your browser does not support the audio element.
+      <audio id="bgm" autoplay muted loop>
+  <source src="sound.mp3" type="audio/mpeg">
+</audio>
+
+<button onclick="unmute()">🔊 Enable Sound</button>
+
+<script>
+  function unmute() {
+    let bgm = document.getElementById('bgm');
+    bgm.muted = false;
+    bgm.play();
+  }
+</script>
 </audio>
   margin:0;
   font-family:'Comic Neue', cursive;
@@ -158,3 +171,4 @@ button {
   opacity:1;
   transition: transform 4s linear, opacity 4s linear;
 }
+
